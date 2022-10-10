@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.list p{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    background-color: #ccc;
+    border-radius: 13px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.list span{
+    margin: 0 20px 0 20px;
+}
