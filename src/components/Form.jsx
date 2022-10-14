@@ -11,16 +11,15 @@ export default function Form() {
 
     const [taskList, setTasksList] = useState([])
    
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = (id) => {
+        id.preventDefault()
         setTasksList([task].concat(taskList))
-        console.log(task)
         setTasks('')
     }
 
-    const handleDelete = (indice) => {
+    const handleDelete = (id) => {
         const newList = [...taskList]
-        newList.splice(indice, 1)
+        newList.splice(id, 1)
         setTasksList(newList)
     }
     
@@ -33,7 +32,8 @@ export default function Form() {
                     id="outlined-basic"
                     label="Digite sua tarefa"
                     variant="outlined" 
-                    onChange={(e) => setTasks(e.target.value)}/>
+                    onChange={(e) => setTasks(e.target.value)}
+                    value={task}/>
             </form>
 
             <Button variant="contained" onClick={handleSubmit}>Adicionar <GrFormAdd size={25}/></Button>
